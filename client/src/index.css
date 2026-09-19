@@ -722,7 +722,7 @@ a {
    MOBILE
 ========================= */
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
 
   .im-main {
     width: 100%;
@@ -736,24 +736,19 @@ a {
     width: 100%;
     height: 64px;
     padding: 0 10px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 8px;
   }
 
   .im-brand {
     display: inline-flex;
     align-items: center;
-
     gap: 6px;
     font-size: 15px;
-
     min-width: 0;
     flex: 1 1 auto;
-
     white-space: nowrap;
     overflow: hidden;
   }
@@ -764,23 +759,14 @@ a {
     flex-shrink: 0;
   }
 
-  /*
-    IMPORTANT:
-    Keep navbar visible on mobile.
-  */
-
   .im-nav {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
-
     align-items: center;
     justify-content: flex-end;
-
     gap: 5px;
-
     margin-left: auto;
-
     flex: 0 0 auto;
     flex-shrink: 0;
   }
@@ -789,21 +775,15 @@ a {
     display: inline-flex !important;
     visibility: visible !important;
     opacity: 1 !important;
-
     align-items: center;
     justify-content: center;
-
     min-width: 58px;
     height: 34px;
-
     padding: 8px 10px;
-
     border-radius: 6px;
-
     font-size: 10px;
     font-weight: 700;
     line-height: 1;
-
     white-space: nowrap;
     flex-shrink: 0;
   }
@@ -838,18 +818,15 @@ a {
   .im-display {
     width: 100%;
     max-width: 100%;
-
     font-size: clamp(38px, 12vw, 48px);
     line-height: 1;
     letter-spacing: -1.8px;
-
     overflow-wrap: break-word;
   }
 
   .im-body {
     width: 100%;
     max-width: 100%;
-
     font-size: 13px;
     line-height: 1.55;
   }
@@ -859,14 +836,12 @@ a {
     margin-top: 14px;
   }
 
-  /* CREATE LAYOUT */
+  /* CREATE */
 
   .im-create-layout {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 32px;
   }
 
@@ -881,14 +856,10 @@ a {
     margin-bottom: 23px;
   }
 
-  /* LABELS */
-
   .im-label-row {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
-
     gap: 10px;
     align-items: flex-start;
   }
@@ -929,10 +900,8 @@ a {
 
   .im-presets {
     width: 100%;
-
     display: flex;
     flex-wrap: wrap;
-
     gap: 7px;
     margin-top: 10px;
   }
@@ -947,9 +916,7 @@ a {
   .im-generate {
     width: 100%;
     min-width: 0;
-
     height: 48px;
-
     font-size: 13px;
   }
 
@@ -957,7 +924,6 @@ a {
 
   .im-share-block {
     width: 100%;
-
     margin-top: 34px;
     padding-top: 22px;
   }
@@ -974,9 +940,7 @@ a {
   .im-share {
     width: 100%;
     height: 46px;
-
     padding: 0 12px;
-
     font-size: 12px;
   }
 
@@ -985,9 +949,7 @@ a {
   .im-preview-wrap {
     width: 100%;
     max-width: 100%;
-
     position: static;
-
     min-width: 0;
   }
 
@@ -999,9 +961,7 @@ a {
   .im-preview {
     width: 100%;
     max-width: 100%;
-
     aspect-ratio: 1 / 1;
-
     border-radius: 9px;
   }
 
@@ -1012,9 +972,7 @@ a {
   .im-preview-empty .preview-icon {
     width: 46px;
     height: 46px;
-
     font-size: 19px;
-
     margin-bottom: 13px;
   }
 
@@ -1030,12 +988,9 @@ a {
 
   .im-home-top {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 25px;
-
     padding-bottom: 30px;
   }
 
@@ -1054,16 +1009,13 @@ a {
 
   .im-gallery {
     width: 100%;
-
     columns: 2;
     column-gap: 10px;
   }
 
   .im-gallery-card {
     width: 100%;
-
     margin-bottom: 10px;
-
     break-inside: avoid;
   }
 
@@ -1076,102 +1028,90 @@ a {
     height: auto;
   }
 
-  /* =========================
-   MOBILE CARD INFO
-   SAME VISUAL STYLE AS DESKTOP
-========================= */
+  /* MOBILE CARD INFO */
 
-.im-card-overlay {
-  position: static;
+  .im-card-overlay {
+    position: static;
+    opacity: 1;
+    transform: none;
+    border-radius: 0;
+    padding: 12px 14px;
+    background: var(--im-navy);
+    color: #ffffff;
+  }
 
-  opacity: 1;
-  transform: none;
+  .im-card-prompt {
+    color: #ffffff;
+    max-height: 60px;
+    overflow: hidden;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.45;
+  }
 
-  border-radius: 0;
+  .im-card-bottom {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
 
-  padding: 16px 14px;
+  .im-author {
+    min-width: 0;
+  }
 
-  background: var(--im-navy);
-  color: #ffffff;
+  .im-avatar {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    display: grid;
+    place-items: center;
+    background: var(--im-cobalt);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .im-author-name {
+    color: #ffffff;
+    font-size: 11px;
+  }
+
+  .im-download {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 7px;
+    background: transparent;
+    color: #ffffff;
+  }
+
+  .im-download img {
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+  }
+
+  /* FOOTER */
+
+  .im-footer {
+    width: calc(100% - 28px);
+    padding: 20px 0 25px;
+    gap: 10px;
+    font-size: 10px;
+  }
 }
 
-.im-card-prompt {
-  color: #ffffff;
-
-  max-height: 58px;
-  overflow: hidden;
-
-  margin: 0;
-
-  font-size: 11px;
-  line-height: 1.45;
-}
-
-.im-card-bottom {
-  width: 100%;
-
-  margin-top: 12px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 8px;
-}
-
-.im-author {
-  min-width: 0;
-}
-
-.im-avatar {
-  width: 28px;
-  height: 28px;
-
-  flex: 0 0 28px;
-
-  display: grid;
-  place-items: center;
-
-  background: var(--im-cobalt);
-  color: #ffffff;
-
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.im-author-name {
-  color: #ffffff;
-  font-size: 11px;
-}
-
-.im-download {
-  width: 30px;
-  height: 30px;
-
-  flex: 0 0 30px;
-
-  display: grid;
-  place-items: center;
-
-  border: 1px solid rgba(255, 255, 255, .3);
-  border-radius: 7px;
-
-  background: transparent;
-  color: #ffffff;
-}
-
-.im-download img {
-  width: 15px;
-  height: 15px;
-
-  filter: invert(1);
-}
- 
 /* =========================
    VERY SMALL PHONES
 ========================= */
 
-@media screen and (max-width: 380px) {
+@media (max-width: 380px) {
 
   .im-header-inner {
     padding: 0 7px;
@@ -1195,9 +1135,7 @@ a {
   .im-nav-link {
     min-width: 52px;
     height: 32px;
-
     padding: 7px;
-
     font-size: 9px;
   }
 
@@ -1221,7 +1159,7 @@ a {
   }
 
   .im-card-overlay {
-    padding: 8px;
+    padding: 10px;
   }
 
   .im-card-prompt {
